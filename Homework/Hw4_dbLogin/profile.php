@@ -2,7 +2,7 @@
 session_start();
 
 	$db = new mysqli("localhost", "root", "", "imagemanagement");
-	$sql_select = "SELECT * FROM Users WHERE id = ".$_SESSION["user_id"];
+	$sql_select = "SELECT * FROM Users WHERE id = ".$_SESSION["userId"];
 	$result = $db->query($sql_select)->fetch_all();
 	echo "<center>WELCOME ".$result[0][3]."</center>";
 ?>
@@ -16,7 +16,7 @@ session_start();
 	<tr>
 		<td><?php echo $result[0][0]?></td>
 		<td><?php echo $result[0][1]?></td>
-		<td><?php echo "********"?></td>
+		<td><?php echo "***"?></td>
 		<td><?php echo $result[0][3]?></td>
 	</tr>
 </table>

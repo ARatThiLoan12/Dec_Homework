@@ -9,12 +9,12 @@
 		$_SESSION["session_username"] = $_POST["username"];
 		for ($i=0; $i < count($result); $i++) { 
 		if($_POST["username"]==$result[$i][1]&&$_POST["password"]==$result[$i][2]){
-			echo "Login thành công!";
+			echo "Login succesfully!";
 			$_SESSION["user_id"] = $result[$i][0];
 			header("Location:../Hw4_dbLogin/profile.php");
 		}
 		else {
-			unset($_SESSION["user_id"]);
+			unset($_SESSION["userId"]);
 		}}
 	}
 ?>
